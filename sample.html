@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>LogzIO web application logging</title>
+</head>
+<body>
+
+	<script type="text/javascript" src="logzio-js.js"></script>
+	<script type="text/javascript">
+		var logger = new LogzioLogger('__YOUR_API_TOKEN__');
+
+		logger.log('Hello, this is just a test');
+		logger.log({
+			and: 'another',
+			test: 'hello world'
+		});
+		logger.log('Did it work ?');
+	</script>
+
+</body>
+</html>
