@@ -9,7 +9,7 @@ Add this snippet just before your closing `</body>` tag.
     (function() {
         var d = parseInt(new Date().getTime()) / 1000 / 60 / 30;
         var l = document.createElement("script"); l.type = "text/javascript"; l.async = true;
-        l.src = "//cdn.logz.io/logger.min.js";
+        l.src = "//cdn.logz.io/logger.min.js?d="+d;
         document.getElementsByTagName("head")[0].appendChild(l);
     })();
     LogzioLogger('__YOUR_API_KEY__');
