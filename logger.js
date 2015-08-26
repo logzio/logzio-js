@@ -20,7 +20,7 @@
     LogzioLogger.prototype.log = function(data) {    
         try {
             var parsedMsg = typeof data == 'object' ? data : { message:data };
-            var logUrl = window.location.protocol + '//listener-http.logz.io:8090?token=' + this.key;
+            var logUrl = window.location.protocol + '//listener.logz.io:8090?token=' + this.key;
 
             Object.keys(parsedMsg).forEach(function(key) {
                 logUrl += '&' + encodeURIComponent(key) + '=' + encodeURIComponent(parsedMsg[key]);
