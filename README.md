@@ -12,7 +12,7 @@ Add this snippet just before your closing `</body>` tag.
         l.src = "//cdn.logz.io/logger.min.js?d="+d;
         document.getElementsByTagName("head")[0].appendChild(l);
     })();
-    LogzioLogger('__YOUR_API_KEY__');
+    window.LogzioLogger = new LogzioLogger('__YOUR_API_KEY__');
 </script>
 ```
 
