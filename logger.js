@@ -1,14 +1,13 @@
 (function(window) {
 
-    var LogzioLogger = function(apiKey, sendConsoleErrors) {
+    var LogzioLogger = function(apiKey, sendConsoleJsErrors) {
         this.key = apiKey;
-        if (sendConsoleErrors) sendConsoleErrors();
+        if (sendConsoleJsErrors) sendConsoleErrors();
     };
 
 	var sendConsoleErrors = function() {
-		var _onerror = window.onerror;
 		window.onerror = function (msg, url, line, col) {
-		    logzioLogger.log({
+		    LogzioLogger.log({
                         message: msg,
                         url: url,
                         line: line,
