@@ -33,7 +33,7 @@
                 console.log("Failed to send log because of exception:\n" + ex);
             }
         }
-    }
+    };
     
     window.LogzioLogger = LogzioLogger;
     
