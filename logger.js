@@ -1,4 +1,4 @@
-(function(window, document) {
+(function(window) {
 
     var LogzioLogger = function(apiKey, sendConsoleErrors) {
         this.key = apiKey;
@@ -38,4 +38,4 @@
     
     window.LogzioLogger = LogzioLogger;
     
-})(window, document);
+})(window);
